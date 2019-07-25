@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>超时调用</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	var d=setTimeout(function(){
+		console.log('hello');
+	}, 10000);
+
+	console.log('-----');
+	setTimeout(function(){
+		console.log("已经过去五秒了");
+		clearTimeout(d);//清除
+	},5000);
+	// function test(){
+	// 	console.log(this);
+	// }
+	// window.test();
+	var t=setInterval(function(){
+		console.log('do after 1 second');
+	}, 1000);
+	setTimeout(function(){
+		clearInterval(t);
+	},10000);
+</script>

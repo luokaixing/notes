@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原型链</title>
+</head>
+<body>
+	<script>
+		//子构造函数的原型对象是父构造函数的实例
+		function Animal(name,age){
+			this.name=name;
+			this.age=age;
+
+		}
+		Animal.prototype.sayName=function(){
+			console.log(this.name);
+		}
+		var animal=new Animal('xiaobai','1');
+		animal.sayName();
+		console.log(animal);
+		function Dog(name,age,color){
+				// this.name=name;
+				// this.age=age;
+				Animal.call(this,name,age);
+				this.color=color;
+		}
+		Dog.prototype=new Animal();//继承原型Animal
+		Dog.prototype.constructor=Dog;
+		Dog.prototype.sayAge=function(){
+			console.log(this.age);
+		}
+		var dog=new Dog('pipixia',1,'yellow');
+		dog.sayName();
+		dog.sayAge();
+		console.log(dog);
+			console.log(Array.prototype.__proto__.constructor.name);
+	</script>
+</body>
+</html>

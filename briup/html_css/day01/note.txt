@@ -1,0 +1,13 @@
+note.txt
+html
+	结构化文档，页面结构
+css
+	页面样式
+	html+css制作静态页面
+js		javascript
+	动作，页面的行为
+
+HTML
+	html4+html5
+	h5有很大改变，新的标签，jsAPI
+	操作H5的本地数据库，音频播放，画布，h5小游戏

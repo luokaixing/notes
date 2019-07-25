@@ -1,0 +1,48 @@
+盒子模型
+overflow  auto hidden scroll
+浮动
+w3c 设置内容宽高
+box-sizing:content-box
+
+ie 盒子宽高
+box-sizing:border-box
+margin/padding:上右下左
+float:left right 
+clear:both;overflow:hidden;父元素
+border
+	border-raduis:50%;
+background
+	background-image
+	color
+	background-size
+	background-repeat:no-repeat
+position
+	relative
+	absolute
+	left right top bottom
+	静态定位
+	position:static  默认文档流位置
+	相对定位
+	relative 原先位置保留不脱离文档流
+	绝对定位
+	absolute
+	如果有相对祖先元素，相对于祖先元素
+	如果没有，相对于视口区左上角定位
+	固定定位
+	position:fixed
+	不受滚动条影响，视口区
+	定位元素
+	position:relative absolute fixed;
+	使用以下属性：left top right bottom
+Z-index层叠顺序
+	值越大离眼睛越近
+	绝对定位，层叠顺序
+	浮动 定位 块级元素不再独占一行
+
+盒子 浮动 定位 flex
+
+动画 一帧一帧
+-webket- 谷歌和safari
+-moz- 火狐
+-ms- 微软
+-o- 欧朋浏览器

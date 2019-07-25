@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM-Node属性和方法</title>
+	<script>
+		console.log(document);
+		console.log(document.constructor);  //HTMLDocument
+		console.log(HTMLDocument.prototype.__proto__.constructor);  //Document
+		//文档加载完毕之后再执行某段js代码
+		// alert(1);
+		window.onload = function(){
+			//body节点
+			console.log(document.body);
+			// alert(1);  //弹出框
+			console.log(document.body.nodeType); //节点类型 Element 1
+			console.log(document.body.nodeName); //节点的名称，元素节点名称 全大写的
+			console.log(document.body.nodeValue);  //节点值，元素节点null  
+			console.log(document.body.firstChild);  //文本节点
+			console.log(document.body.firstChild.nodeValue);
+			//孩子节点
+			console.log(document.body.childNodes); //类数组，存放孩子节点
+			//将类数组对象转成数组
+			var childs = document.body.childNodes;
+			var arr = Array.prototype.slice.call(childs,0);
+			console.log(arr);
+			console.log(childs[2].parentNode); //父节点  body
+			console.log(document.body.ownerDocument === document);
+			console.log(document.body.childNodes[0].nextSibling.hasChildNodes());
+			
+// Array.prototype.mySlice = function(){
+// 	var temp = [];
+// 	for(var i=arguments[0];i<(arguments[1]?arguments[1]:this.length);i++){
+// 		temp.push(this[i]);
+// 	}
+// 	return temp;
+// }
+// var arr = [2,3,45,4,6,7];
+// console.log(arr.mySlice(1,3));
+
+			 
+		}
+	</script>
+</head>
+<body>
+	文本内容
+	<div>hello</div>
+	<span>world</span>
+	<!-- comment 8 -->
+	<!-- <script>
+		console.log(1);
+	</script> -->
+	<div></div>
+	<script>
+		console.log(document.body);
+	</script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+

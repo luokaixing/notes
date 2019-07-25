@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax封装</title>
+	<script>
+	
+		findAllCategory();
+		deleteCategoryById({id:1743});
+		var obj={
+			name:'luotest',
+			comment:'luotest',
+			no:2
+		};
+		var arr=[];
+		for (var i=0;i<10;i++){
+			var temp=JSON.parse(JSON.stringify(obj));
+			temp.name=temp.name+i;
+			saveOrUpdateCategory(temp);
+			//arr.push(obj);
+		}
+		//saveOrUpdateCategory({});
+		batchDeleteCategory({ids:[1823,1824,1825].join()});
+		function batchDeleteCategory(obj){
+			myAjax('POST','/manager/category/batchDeleteCategory',obj,function(res){
+				console.log(res);
+				findAllCategory();
+			},function(error){
+				console.log(error);
+			});
+		}
+		function saveOrUpdateCategory(obj){
+			myAjax('POST','/manager/category/saveOrUpdateCategory',obj,function(res){
+				console.log(res);
+				findAllCategory();
+			},function(error){
+				console.log(error);
+			});
+		}
+		function deleteCategoryById(obj){
+			myAjax('GET','/manager/category/deleteCategoryById',obj,function(res){
+				console.log(res);
+				findAllCategory();
+			},function(error){
+				console.log(error);
+			});
+		}
+		function findAllCategory(){
+			myAjax('GET','/manager/category/findAllCategory',null,function(res){
+				console.log(res);
+			},function(error){
+				console.log(error);
+			});
+		}
+		function myAjax(mehtod,url,param,handle,handle2){
+		//内部执行成功，执行handle
+		baseURL='http://134.175.154.93:8099';
+		var http=new XMLHttpRequest();
+		//get参数处理
+		if(method==='GET'&&param){
+			url+="?"+encodeFormData(param);
+		}
+		http.open(method,baseURL+url);
+		console.log(baseURL+url);
+		http.onreadystatechange=function(){
+			if(http.status===200&&http.readystate===4){
+				console.log('访问成功！');
+				handle(JSON_parse(http.responseText));
+			}else{
+				handle2(http.responseText);
+			}
+		}
+		//post参数处理
+		if(method==='POST'&&param){
+			http.setRequestHeader('Content-Type','application/x-www-form-urlencoded;charset=UTF-8');
+			http.send(encodeFormData(param));
+		}else{
+		http.send();
+		}
+	}
+
+	function encodeFormData(data){
+				if(!data){
+					return "";
+				}
+				var pairs = [];
+				for(var name in data){
+					if(!data.hasOwnProperty(name)){
+						continue;
+					}
+					if(typeof data[name] == "function"){
+						continue;
+					}
+					var value = data[name].toString();
+					name = encodeURIComponent(name.replace("%20","+"));//编码名字
+					value = encodeURIComponent(value.replace("%20","+"));//编码值
+					pairs.push(name+"="+value);
+				}
+				return pairs.join('&');
+			}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

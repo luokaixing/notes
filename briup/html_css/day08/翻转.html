@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>无聊的一天</title>
+	<style>
+		.wrap,.box1,.box2{
+			width:200px;
+			height:200px;
+		}
+		.wrap{
+			position:relative;
+
+		}
+		.box1,.box2{
+			position:absolute;
+			top:0;
+			left:0;
+			transition:all 1s;
+			backface-visibility:hidden;
+		}
+		.box1{
+			background: red;
+			z-index:2;
+		}
+		.box2{
+			background: green;
+			transform:rotateY(180deg);
+		}
+		.wrap:hover .box2{
+			transform:rotateY(0deg);
+		}
+		.wrap:hover .box1{
+			transform:rotateY(180deg);
+		}
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box1">这是正面</div>
+		<div class="box2">这是反面</div>
+	</div>
+</body>
+</html>

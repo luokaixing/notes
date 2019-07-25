@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>a标签伪类</title>
+	<style>
+		a{
+			/*去掉下划线*/
+			text-decoration: none;
+		}
+		/*a标签为访问过的样式*/
+		a:link{
+			color:orange;
+		}
+		a:visited{
+			color:pink;
+
+		}
+		a:hover{
+			color:cyan;
+			cursor:wait;
+		}
+		/*点击样式*/
+		a:active{
+			color：#cccccc;
+		}
+		span{
+			cursor:pointer;
+		}
+
+
+	</style>
+</head>
+<body>
+	<a href="./7-伪类选择器.html">跳转1</a>
+	<a href="./6-属性选择器.html">跳转2</a>
+	<span>span</span>
+</body>
+</html>

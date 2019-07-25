@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	window.onload=function(){
+		var a=document.links[0];
+		var input=document.forms[0].lastElementChild;
+		//console.log(a);
+		//console.log(form);
+		a.onclick=function(event){
+			event.preventDefault();
+			event.returnValue=false;
+			if(event.preventDefault){
+				event.preventDefault();
+			}else{
+				event.returnValue=false;
+			}
+		}
+		input.onclick=function(event){
+			event.preventDefault();
+			event.returnValue=false;
+			if(event.preventDefault){
+				event.preventDefault();
+			}else{
+				event.returnValue=false;
+			}
+		}
+	}
+	</script>
+</head>
+<body>
+	<a href="http://www.baidu.com">跳转</a>
+	<form action="http://www.taobao.com">
+		<input type="text">
+		<input type="submit" value="提交">
+	</form>
+</body>
+</html>

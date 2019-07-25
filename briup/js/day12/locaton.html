@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>loaction</title>
+	<script>
+	console.log(location);
+	console.log(window.location==document.location);
+	window.onload=function(){
+		var btns=document.getElementsByTagName('button');
+		btns[0].onclick=function(){
+			//location="http://www.baidu.com";
+			//location.href="http://www.baidu.com";
+			//location.assign("http://www.baidu.com");
+			//location.replace("http://www.baidu.com");//不能返回
+			window.open("http://www.baidu.com");//新建选项卡 新窗口
+		}
+		btns[1].onclick=function(){
+			 location.reload();
+		}
+		btns[2].onclick=function(){
+			//history.forward();
+			history.go(1);//正数下几页
+			
+
+		}
+	}
+
+	</script>
+</head>
+<body>
+	<button>点击跳转</button>
+	<button>刷新</button>
+	<button>跳转下一页</button>
+</body>
+</html>

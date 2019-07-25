@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>calc</title>
+	<style>
+	*{
+		margin:0;
+		padding: 0;
+	}
+		div{
+			/*width: calc(50% + 30px);
+			height: 100px;
+			background-color: pink;
+*/
+		}
+		.left-div{
+			width:200px;
+			background-color: coral;
+			height:100%;
+		}
+		.right-div{
+			width:calc(100% - 200px);
+			height:100%;
+			background-color: cyan;
+		}
+		.container{
+			display:flex;
+			/*height:500px;*/
+			position:absolute;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+			/*width:100%;*/
+		}
+
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="left-div"></div>
+	<div class="right-div"></div>
+</div>
+</body>
+</html>

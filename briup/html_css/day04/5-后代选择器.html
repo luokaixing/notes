@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>后代选择器</title>
+	<style>
+		/* .outer *{
+			border:1px solid red;
+		
+		} */
+		.outer p{
+			/* border:2
+			px solid red; */
+		}
+		/* .outer .inner{
+			border:3px solid yellow;
+		} */
+		/* .outer>*{
+			直接孩子
+			border:5px dashed teal;
+		} */
+		.outer>p{
+			/*虚线*/
+			border:5px dashed teal;
+
+		}
+		/* #p2+*{
+			点状线
+			border:3px dotted red;
+		} */
+		/* #p2~span{
+			border:6px solid blue;
+		
+		} */
+		/*组合选择器*/
+		p,span{
+			border:1px solid #cdcdcd;
+		}
+		div.inner p{
+			border:10px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div class="outer">
+		<p>p1</p>
+		<p id="p2">p2</p>
+		<span>span1</span>
+		<span>span2</span>
+		<div class="inner">
+			<p>p1</p>
+			<p>p2</p>
+			<span>span1</span>
+			<span>sapn2</span>
+
+		</div>
+	</div>
+</body>
+</html>

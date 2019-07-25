@@ -1,0 +1,54 @@
+单位
+	px
+	em
+	rem
+	%
+颜色
+	关键字 red
+	#ffffff
+	#fff
+	rgb(0,0,255)
+	egba(255,255,255,0.5)
+font属性
+	font-family
+		serif
+		sans-serif
+		cursive
+		monospace
+	webFont
+		@font-face{
+			font-family:'test';
+			src:url('');
+		}
+		//使用字体
+		div{
+
+		}
+	font-style{
+
+	}
+	font-weight{
+
+	}
+	font-size{
+
+	}
+	text-decoration{
+	none;underline;
+	overline;line-through;
+	}
+	text-decoration-style/color/wavy;
+	text-transform{
+		lowercase;upercase;
+	}
+	text-shadow:3px 3px 2px red;
+	list-style-type:decimal;
+	display:none/block;
+	visibility:hidden/;
+	opcity:0.5;
+	overflow;//溢出处理
+图片精灵技术
+	服务器
+	前端项目部署到服务器上，图片也是在服务器上，如果要显示A图片，B图片,访问一次图片，发送一次请求；
+	background-position:
+浮动

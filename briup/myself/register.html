@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册页面</title>
+	<link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="static/css/test.css">
+	<script type="text/javascript" src="static/js/jquery.min.js"></script>
+	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+	
+<body>
+  <div class="container">
+  	<div class="header" >
+  	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">首页</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+       
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">文章分类 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">PHP</a></li>
+            <li><a href="#">Java</a></li>
+            <li><a href="#">HTML5</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">JavaScript</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">心情的足迹</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+	<div class="main-content">
+
+		<div class="row">
+		  <div class="col-md-8" style="border-right:1px solid #cdcdcd;min-height:600px;">
+        <div class="rg">
+          <form action="login.html" method="post">
+          <span style="font-size:30px;color:blue">用户登录</span><br>
+            用&nbsp;&nbsp;户&nbsp;&nbsp;名：<input type="text" name="username"><br>
+            密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" name="password"><br>
+            确认密码：<input type="password" name="confirm"><br>
+            手机号码：<input type="tel"><br>
+            邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：<input type="email"><br>
+            <input type="submit" value="注册" style="width:250px;height:40px;background:green">
+          </form>
+        </div>
+		  	
+		  	
+		  </div>
+		  <div class="col-md-4">
+		  	<div class="left1">最新文章</div>
+		  </div>
+		</div>
+	</div>
+</div>
+	
+</body>
+</html>

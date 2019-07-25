@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>transition</title>
+	<style>
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+
+		}
+		div:hover{
+			width:300px;
+			background: blue;
+			/*过度*/
+			/*transition:width 2s linear 1s,background 2s linear 1s;*/
+			/*多个属性*/
+			transition:all 2s linear 1s;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	
+</body>
+</html>

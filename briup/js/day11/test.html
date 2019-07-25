@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<script>
+		window.onload=function(){
+			var div=document.getElementsByTagName('div')[0];
+			var btn=document.getElementsByTagName('button')[0];
+
+			div.onclick=function(event){
+				alert('hello');
+			};
+			btn.onclick=function(event){
+				div.onclick=null;
+				alert('解绑成功');
+				this.style.background='#ccc';
+				this.onclick=null;
+				
+			}
+		}
+	</script>
+</head>
+<body>
+	<div>点击我</div>
+	<button>解绑</button>
+</body>
+</html>

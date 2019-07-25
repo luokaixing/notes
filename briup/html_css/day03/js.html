@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js实例演示</title>
+</head>
+<body>
+	<h1>页面实例js</h1>
+	<p id="demo">我的第一个段落</p>
+	<div id="myDiv">一个Div</div>
+	<button onclick="myFunction()">按钮点击这里</button>
+	<script>
+	function  myFunction(){
+		//document.getElementById("demo").innerHTML="你好 Dolly";
+	document.getElementById("myDiv").innerHTML="最近过的还好吗";
+	}
+	/*
+	下面的代码会执行
+	但是这一段不执行
+	*/
+	
+
+	</script>
+	<p>点击按钮时，两个元素都会改变</p>
+	<p><b>注释：</b>注释不被执行</p>
+	<p><strong>注意：</strong>注释块不被执行</p>
+	<script>
+	var firstname;
+	firstname="lili";
+	document.write(firstname);
+	document.write("<br>");
+	firstname="anna";
+	document.write(firstname);
+
+
+
+
+
+	</script>
+	<p>如果时间早于20：00，会获得问候"Good day"</p>
+	<button onclick="test()">点击我</button>
+	<p id="luo"></p>
+	<script>
+		function test(){
+			alert("您好\n我是一个的警告框");
+			var x="";
+			var time=new Date().getHours();
+			if(time<20){
+				x="Good day";
+
+			}else{
+				x="Good evening";
+			}
+			document.getElementById("luo").innerHTML=x;
+		}
+
+
+	</script>
+	<p id="t1"></p>
+	<script>
+		var r=Math.random();
+		var x=document.getElementById("t1")
+		if(r>0.5){
+			x.innerHTML="<a href='http://www.baidu.com'>访问百度</a>";
+		}else{
+			x.innerHTML="<a href='http://www.taobao.com'>访问淘宝</a>";
+		}
+
+
+	</script>
+</body>
+</html>

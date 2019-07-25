@@ -1,0 +1,27 @@
+target	_self当前选项卡打开
+		—blank打开新的选项卡
+img src 路径 绝对/相对 alt 图片加载失败提示 width height 图片宽高
+table
+	thead
+	tbody
+		tr
+			td/th
+	tfoot
+table border 边框 align center 居中 cellpadding 0 cellspacing 0 
+caption 标题信息 bottom/top
+header/footer nav 
+article文章
+section第一章内容
+aside 侧边栏，广告
+details
+form表单
+	form 
+	input  type= text password submit
+	同一组单选按钮的name保持一致
+	点击男选中对应值 label
+	提交给后台的是value 值
+	input要有name属性才可以后台获取
+	disabled input 值不提交
+	戒了烟我不习惯，你给过我的伤害。。。。。
+	如果有人再灯塔，拨弄她的头发
+	思念刻在墙和瓦，

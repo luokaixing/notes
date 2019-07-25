@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>medio</title>
+	<style>
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+		}
+		/*
+		768>超小屏
+		768-992小屏
+		992-1200中屏
+		1200<大屏
+		 */
+		@media screen and (min-width: 1200px){
+			div{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			}
+		}
+		@media screen and (min-width: 992px) and (max-width: 1200px){
+			div{
+			width: 100px;
+			height: 100px;
+			background-color: green;
+			}
+		}
+		@media screen and (min-width:768px) and (max-width:992px){
+			div{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			}
+		}
+		@media screen and (max-width: 768px){
+			div{
+			width: 100px;
+			height:100px;
+			background-color: yellow;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

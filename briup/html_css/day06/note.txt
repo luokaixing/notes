@@ -1,0 +1,36 @@
+伪元素选择器
+	::after ::before  ::first-letter选中第一个字符
+	::first-line第一行 ::selection浏览器中被选中的
+！important最优先
+	特性值
+	style内属性1000
+	ID  100
+	class 属性选择器 伪类选择器10
+	标签 伪元素1
+	特性值一样 就近原则
+	inherit继承
+	initial 不继承
+	unset 不设置
+display属性
+	inline 行内
+	block 块
+	inline-block 行内有宽高
+CSS颜色
+    关键字red
+    16进制6位  #ffffff
+    16进制3位  #fff
+    rgb(0,255,255)
+    rgba(100,100,100,0.5)红，绿，蓝，透明度    带参数的函数rgba(a,b,c)
+CSS单位
+	px绝对单位
+	em相对单位
+	font-size:16px;
+	1em=16px;
+	1rem=16px;rem不变化
+	%
+	50%占父容器
+文本样式
+	text-decoration:none;不修饰
+	font-family:;
+	font-size:;
+	text-align:;

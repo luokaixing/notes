@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function baseAjax() {
+        var xmlhttp;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        } else if (window.ActiveXObject) {  
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");  
+        } else {  
+            xmlhttp = null;  
+            return;
+        }  
+        xmlhttp.open(arguments[0],arguments[1],true);
+        var callback = arguments[3];
+        xmlhttp.onreadystatechange = function(){
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                callback(JSON.parse(xmlhttp.responseText));
+            }
+        }
+        if (arguments[0] == 'GET') {
+            xmlhttp.send();
+        } else {
+            var str = formatParams(arguments[2]);
+            console.log(str);
+            xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            xmlhttp.send(str);
+        }
+    }
+//这是调用的GET实例
+var model = {};
+    baseAjax('GET','http://localhost:4000/vercode',model,function(data){
+        console.log(data);
+      });
+//这是调用的POST实例
+var model = {
+            username : ,
+            password : 
+        };
+        baseAjax('POST','http://localhost:4000/login',model,function(data){
+        console.log(data);
+      });
+
+</script>

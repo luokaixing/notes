@@ -1,0 +1,51 @@
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>move</title>
+</head>
+
+
+<body>
+		<img id="myimg" src="./img/01.jpeg" style="left:0px; top:0px; position:absolute;width:50px;height:50px"/>
+	<script>
+		var img = document.getElementById("myimg");
+		img.left = 0;
+		img.top = 0;
+		document.onkeydown = move;
+		function move(e){
+			var k = e.keyCode || e.which;
+
+			switch(k){
+				case 37 || 100:
+				img.left = img.left-10;
+				break;
+				case 38 || 104:	
+				img.top = img.top-10;
+				break;
+				case 39 || 102:
+				img.left = img.left +10;
+				break;
+				case 40 || 98:
+				img.top = img.top + 10;
+				break;
+			}
+
+				return img.style.left = img.left+'px',img.style.top = img.top+'px';
+				if(k=37 || 100){
+			img.style="transform: rotateZ(270deg);width:50px;height:50px;";
+			}
+			if(k=38 || 104){
+				img.style="transform: rotateZ(0deg);width:50px;height:50px;";
+			}
+			if(k=39 || 102){
+				img.style="transform: rotateZ(90deg);width:50px;height:50px;";
+			}
+			if(k=40 || 98){
+				img.style="transform: rotateZ(180deg);width:50px;height:50px;";
+			}
+		}
+		
+
+	</script>
+</body>
+</html>

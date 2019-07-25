@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>element</title>
+	<style>
+		.red{
+			backgroud-color:red;
+		}
+		.blue{
+			backgroud-color:blue;
+		}
+
+	</style>
+	<script>
+	window.onload=function(){
+		var div=document.body.children[0];
+		//console.log(div);
+		//console.log(document.body.firstElementChild);
+		console.log(div.className);
+		console.log(div.title);
+		console.log(div.getAttribute('title'));
+		console.log(div.getAttribute('data-flag'));
+		console.log(div.style);
+		console.log(div.getAttribute('style'));
+		div.style.color='skyblue';
+		//div.setAttribute('style','yellow');
+		div.style.backgroundColor="red";
+		console.log(div.onclick);
+		console.log(div.getAttribute('onclick'));
+		div.title="hello";
+		div.setAttribute('title','laji');
+		div.removeAttribute("title");
+		console.log(div.innerHTML);
+		console.log(div.innerText);
+		console.log(div.textContent);
+		//div.innerText='hello';
+		//div.innerHTML='<span>span</span>';
+		div.innerText='<span>span</span>';
+
+
+
+		
+	}
+	function test(){
+		//alert('zhujingle');
+		var div=document.getElementById('one');
+		console.log(div);
+		var str='red';
+		if(div.className=='red'){
+			str='blue';
+		}else{
+			str='red';
+		}
+		div.className=str;
+	}
+	</script>
+</head>
+<body>
+	hello
+	<div id="one" class="red" title="我是div" data-flag="1001" style="color:coral" onclick="test()">
+		one
+		two
+		three
+		<span>four</span>
+	</div>
+</body>
+</html>

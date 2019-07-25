@@ -1,0 +1,5 @@
+var d=setTimeout(function(){alert(zhendere);},1000);    clearTimeout(d);清除超时调用
+clearTimeout(ID);
+setInterval();间歇调用
+clearinterval(t);
+先输出主程序，然后执行setTimeout();

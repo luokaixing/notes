@@ -1,0 +1,32 @@
+正则表达式
+	/ 正则表达式语法/img
+	模式次数
+	\d  \D  \w  \W\s\S   \^ $ 
+	\b
+	(\d){2}
+	(hello){2}
+	\num 小括号最后一次匹配内容
+	* 0到多
+	+ 1到多
+	？最少
+	{2，6}
+	{2，}
+	var time=new Date();
+	var year=time.getFullYear();
+	Math.random();   0到1随机数
+Date构造函数
+	new Date();
+	new Date(12364546463);
+	time.getMonth()+1;
+	new Date(2019-07-06 09:09:09)
+	time.getTime();
+
+Document类型   document
+Element类型    元素类型
+Text类型       文本节点
+Comment类型     注释节点
+
+Document类型的属性和方法
+	document
+Element类型的属性和方法
+	.......

@@ -1,0 +1,59 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>测试颜色背景</title>
+<script>
+	var ticker=0;
+	var col = new Array("#000000","#A52A2A","#B8860B","pink","green","yellow","red","orange","#BB008B","#8B0000");
+	  
+	function drawBackground(){
+		var canvasHide=document.getElementById("hide"); //隐藏的画布
+		var g=canvasHide.getContext("2d"); //找出隐藏画布 hide 的画笔 g 
+		g.clearRect(0,0,1200,800); //清理隐藏画布
+		var i=0;
+		do { //画 不同颜色 依次同心发散的园
+			g.beginPath();
+			var grd=g.createRadialGradient(300,300,300-i*25, 300,300,265-i*25);
+			grd.addColorStop(0,col[(0+i+ticker)%col.length]);
+			grd.addColorStop(1,col[(1+i+ticker)%col.length]);
+			g.fillStyle=grd;
+			g.arc(300,300,300-i*25,0,2*Math.PI);
+			g.fill();
+			i++;
+	} while(i<11);
+	  
+	//找出显式画布 myCanvas 的画笔 gg 
+	var gg=document.getElementById("myCanvas").getContext("2d");
+	gg.clearRect(0,0,myCanvas.width,myCanvas.height); //清理显式画布
+	  
+	/* 将隐式画布 hide 的园形图像，
+	 * 以 宽 600, 高 300 的比例,
+	 * 画到显式画布 myCanvas,
+	 * 结果，隐式画布 hide 的园形图像，在显式画布 myCanvas 上 成了椭圆
+	 */
+	gg.drawImage(canvasHide,0,0,600,300); 
+	ticker++;
+	}
+	  
+	function preperation(){
+		setInterval('drawBackground()',1000);
+	 }
+</script>
+<style>
+	#myCanvas{
+	 position:absolute;
+	 left:0px;
+	 top:0px;
+	}
+	#hide{
+	 display:none;
+	}
+</style>
+</head>
+  
+	<body onLoad="preperation()">
+	<canvas id="myCanvas" width="600" height="400" ></canvas>
+	<canvas id="hide" width="600" height="600" ></canvas>
+  
+</body>
+</html>

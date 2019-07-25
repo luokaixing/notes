@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>h5表单</title>
+	<script>
+	window.onload=function(){
+		var ele=document.getElementById('download');
+		var show=document.getElementById('show');
+	    console.log(ele.value);
+	    //ele.value=80;
+	    //定时器
+	    setInterval(function(){
+           if(ele.value>=100){
+           	return;
+           }else{
+            ele.value=ele.value+5;
+            show.innerHTML=ele.value+'%';
+           }
+	    },2000);
+	}
+	
+
+	//获取元素
+	</script>
+</head>
+<body>
+		<form action="" id="form">
+			<progress id="download" value="20" max="100"></progress><output id="show">20%</output>
+		<br>
+		<meter min="0" max="100" low="40" high="60" value="50"></meter>
+		<meter min="0" max="100" low="40" high="60" value="20"></meter>
+		<meter min="0" max="100" low="40" high="60" value="80"></meter>
+		<!-- 黄色和绿色 -->
+		<meter min="0" max="100" low="40" high="60" optimum="50" value="60"></meter>
+		<meter min="0" max="100" low="40" high="60" optimum="20" value="20"></meter>
+		<!-- 红色 -->
+		<meter min="0" max="100" low="40" high="60" optimum="20" value="80"></meter><br>
+		<input type="text" list="datasource" name="datalist">
+		<datalist id="datasource">
+			<option value="hello">hello</option>
+			<option value="tom">tom</option>
+			<option value="jack">jack</option>
+			<option value="lili">lili</option>
+		</datalist>
+		<br>
+		<input type="text" name="test"><br>
+		<input type="date" name="date"><br>
+		<input type="time"><br>
+		<input type="datetime-local"><br>
+		<input type="month"><br>
+		<input type="week"><br>
+		<button type="submit">提交测试</button>
+		<button type="submit" >提交测试</button>
+		<input type="number"><br>
+		<input type="color" name="color">
+		<!-- 正则表达式验证pattern required必填才能提交-->
+		电话：<input type="tel" pattern="[0-9]{11}">
+		<input type="email required">
+		<input type="text">
+		<input type="url">
+		<input type="range" min="0" max="100" step="10" value="50">
+
+	</form>
+	<input type="submit" form="form" value="提交">
+</body>
+</html>

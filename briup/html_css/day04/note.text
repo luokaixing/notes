@@ -1,0 +1,24 @@
+样式表
+	div{
+		color:resd;
+		font-size:10px;
+	}
+	选择器CSS代码块
+	css样式
+	div{
+		background-color:#ffffff;
+		font-size:40px;
+	}
+css选择器，选中匹配的元素，然后进行样式设置
+	标签选择器 DIV H1 th td 
+css样式
+元素节点
+注释节点
+属性节点 <img src="" alt="">
+原生js JQuery React Vue AngularJS网站应用广泛
+@import 导入
+	可以在css中引入其他css
+	也可以在html中引入css
+给谁设置什么样式
+	选择器
+	样式属性

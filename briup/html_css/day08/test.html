@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>同心圆</title>
+	<style>
+	body{
+		margin: 0;
+		padding: 0;
+		position:relative;
+
+	}
+		.one{
+			width:370px;
+			height:520px;
+			background-color: #37383c;
+			position:absolute;
+			top:70px;
+			left:450px;
+
+		}
+		.two{
+			width:160px;
+			height: 160px;
+			border-radius: 50%;
+			border:20px solid #C9CACE;
+			position:absolute;
+			top:85px;
+			left:85px;
+			animation-name:two;
+			animation-duration:5s;
+			animation-direction:alternate;
+			animation-iteration-count:infinite;
+		}
+		.three{
+			width:240px;
+			height: 240px;
+			border-radius: 50%;
+			border:5px solid #808185;
+			position:absolute;
+			top:54px;
+			left:54px;
+			animation-name:three;
+			animation-duration:4s;
+			animation-direction:alternate;
+			animation-iteration-count:infinite;
+		}
+		@keyframes two{
+			0%{
+				width:160px;
+				height:160px;
+			}
+			100%{
+				width: 148px;
+				height:148px;
+			}
+		}
+		@keyframes three{
+			0%{
+				width:240px;
+				height:240px;
+			}
+			100%{
+				width: 250px;
+				height:250px;
+			}
+		}
+		.four{
+			color:white;
+			position:absolute;
+			top:410px;
+			left:180px;
+
+		}
+
+	</style>
+</head>
+<body>
+		<div class="one">
+			<div class="two"></div>
+			<div class="three"></div>
+			<div class="four">HI!</div>
+		</div>
+	
+</body>
+</html>

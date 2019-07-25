@@ -1,0 +1,53 @@
+继承
+	原型链继承
+		Dog.prototype=new Animal();
+		Dog.prototype.constructor=Dog;
+	金典继承
+		Animal.call(this,name,age);
+DOM继承
+	Node类型
+	parent.appendChild(node)追加内容
+	parent.insertBefore(newnode,参照)；
+	parent.removeChild(node)
+	Document类型
+		document实例
+		getElementById('id');
+		getElementsByTagName('div')[0];
+		getElementsByName('username');
+		getElementsByClassName('main');
+		createElement('div')//创建元素节点
+	Element类型
+		data-flag自定义属性
+		获取属性
+			元素节点.属性名
+		设置属性
+			元素节点.属性名="属性值"
+			元素节点.style.color="blue"
+			setAttribute('title','world')
+			getAttribute('title')
+事件
+	click
+	mouseover
+	mouseout
+	dbclick
+	focus
+	blur
+	load
+	mouseleave
+	写事件
+	<div onclick="fun()"></div>
+	div.onclick=function(){}
+	div.addEventListener('click',function(){})
+	事件三要素
+		目标
+		处理程序
+		事件对象
+			event
+				type:
+				target:
+		div.onclick=function(){}
+
+	事件流
+		事件冒泡流
+		事件捕获流
+		DOM事件流  捕获  处理 再冒泡

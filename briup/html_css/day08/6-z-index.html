@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>z-index</title>
+	<style>
+		.one{
+			width: 200px;
+			height: 200px;
+			background-color:red;/* rgba(255,0,0,0.5);*/
+			opacity:0.5;
+			position: absolute;
+			top:100px;
+			left:100px;
+			z-index:100;
+		}
+		.two{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			position: absolute;
+			top:100px;
+			left:100px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="one">one</div>
+		<div class="two">two</div>
+	
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax</title>
+	<script>
+		/*myajax('GET','/manager/category/batchDeleteCategory',{id:1001},function(res){
+			res===http.responseText
+		});
+		// 配置文件内
+		baseURL = 'http://134.175.154.93:8099';
+		function myajax(method,url,param,handle){
+			open('get',baseURL+url);
+			if(){
+				handle(http.responseText);
+			}
+		}*/
+		findAllCategory();
+		saveOrUpdateCategory({name:'test',comment:'test',no:1});
+		deleteCategoryById(157);
+		batchDeleteCategory({ids:[200,201,202,203,204].toString()});
+		// 修改的使用
+		saveOrUpdateCategory({id:'237',name:'test1111',comment:'test1111',no:2});
+		// findAllCategory();
+		//批量删除
+		//参数：批量删除的id的数组
+		function batchDeleteCategory(obj){
+			var http = new XMLHttpRequest();
+			http.open('POST','http://134.175.154.93:8099/manager/category/batchDeleteCategory');
+			// 监听，如果响应完成并且响应成功，获取响应数据
+			http.onreadystatechange = function(){
+				if(http.status===200&&http.readyState===4){
+					//响应数据
+					console.log(http.responseText);
+					findAllCategory();
+				}
+			}
+			// 设置请求头
+			http.setRequestHeader('Content-Type','application/x-www-form-urlencoded;charset=UTF-8');
+			// 传递表单格式的数据
+			http.send(encodeFormData(obj));
+		}
+		//删除栏目 
+		//参数：要删除的id
+		function deleteCategoryById(id){
+			var http = new XMLHttpRequest();
+			http.open('GET','http://134.175.154.93:8099/manager/category/deleteCategoryById?id='+id);
+			http.onreadystatechange = function(){
+				if(http.status===200&&http.readyState===4){
+					console.log(http.responseText);
+					findAllCategory();
+				}
+			}
+			http.send();
+		}
+		// 查找所有的栏目信息
+		function findAllCategory(){
+			var http = new XMLHttpRequest();
+			http.open('GET','http://134.175.154.93:8099/manager/category/findAllCategory');
+			http.onreadystatechange = function(){
+				if(http.status===200&&http.readyState===4){
+					console.log(http.responseText);
+				}
+			}
+			http.send();
+		}
+		//保存
+		// 参数：要保存的对象
+		function saveOrUpdateCategory(obj){
+			//给后台传递数据的ajax，get形式传递的
+			//发送post请求，并且携带参数
+			var http = new XMLHttpRequest();
+			http.open('POST','http://134.175.154.93:8099/manager/category/saveOrUpdateCategory');
+			// 监听，如果响应完成并且响应成功，获取响应数据
+			http.onreadystatechange = function(){
+				if(http.status===200&&http.readyState===4){
+					//响应数据
+					console.log(http.responseText);
+					findAllCategory();
+				}
+			}
+			// 设置请求头
+			http.setRequestHeader('Content-Type','application/x-www-form-urlencoded;charset=UTF-8');
+			// 传递表单格式的数据
+			http.send(encodeFormData(obj));
+			/*http.send({
+				name:'liuyr',
+				comment:'liuyr1',
+				no:12
+			});*/
+		}
+		// 将js的对象转换成表单格式数据
+		function encodeFormData(data){
+			if(!data){
+				return "";
+			}
+			var pairs = [];
+			for(var name in data){
+				if(!data.hasOwnProperty(name)){
+					continue;
+				}
+				if(typeof data[name] == "function"){
+					continue;
+				}
+				var value = data[name].toString();
+				name = encodeURIComponent(name.replace("%20","+"));//编码名字
+				value = encodeURIComponent(value.replace("%20","+"));//编码值
+				pairs.push(name+"="+value);
+			}
+			return pairs.join('&');
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

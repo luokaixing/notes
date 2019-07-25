@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试文件</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	//封装排序方法
+
+	// function sorts(one){
+	// 	for(var i=0;i<one.length;i++){
+	// 		var min=i;
+	// 		for(var j=i+1;j<one.length;j++ ){
+	// 			if(one[j]<one[min]){
+	// 				min=j;
+	// 			}
+	// 		}
+	// 		var temp=one[i];
+	// 		one[i]=one[min];
+	// 		one[min]=temp;
+	// 	}
+	// 	return one;
+	// }
+	// var one=[5,7,9,2,4];
+	// document.write("排序前"+one +"\n");
+	// document.write("排序后"+sorts(one));
+	// console.log(sorts(one));
+	 
+	 
+	//封装反转方法 方法一
+	// var arr = [10,20,30,40,50,60,70];
+	// for(var i=0;i<arr.length/2;i++){
+	// 	var temp = arr[i];
+	// 	arr[i]=arr[arr.length-1-i];
+	// 	arr[arr.length-1-i]=temp;
+	// }
+	// document.write(arr);
+	//方法二
+	// var arr1 = [10,20,30,40,50,60,70];
+	// function fanzhuan(array){
+	// 	var temp = [];
+	// 	for(var i=array.length-1;i>=0;i--){
+	// 		temp[temp.length]=array[i];
+	// 	}
+	// 	for(var j=0;j<temp.length;j++){
+	// 		array[j]=temp[j];
+	// 	}
+	// }
+	// fanzhuan(arr1);
+	// console.log(arr1);  
+	 
+	
+	//封装数组pop()
+	// var arr = [10,20,30,40,50,60,70];
+	// var mypop = function(arr){
+ //    var len = arr.length,
+ //        ret = arr[len - 1];
+ //    if(len > 0 && (arr.length -= 1)){
+ //    	return ret;
+ //    }
+ //    }
+ //    document.write(arr.mypop());
+		
+
+		//封装数组push()方法
+		    
+ 		var arr = [];
+		Array.prototype.push = function() {
+			for( let i = 0 ; i < arguments.length ; i++){
+				this[this.length] = arguments[i] ;
+			}
+			return this.length;
+		}
+		console.log(arr.push('lala'));
+</script>

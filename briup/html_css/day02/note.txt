@@ -1,0 +1,50 @@
+note.txt
+HTML
+		html4
+		html5
+		<!DOCTYPE html>
+		<html lang="en">
+		   <head>
+		      <meta charset="utf-8">
+		      <title>标题</title>
+		   </head>
+		   <body>
+		   网页显示内容
+		   <p></p>
+		   <div></div>
+		   <strong></strong>
+		   <i></i>
+		   <b></b>
+		   <ul >
+		   <li>阳澄湖大闸蟹</li>
+		   <li>葡萄</li>
+		   <li></li>
+
+
+		   </ul>
+		   <ol reversed type="circle/disc">
+		   <li>1</li>
+		   <li>2</li>
+		   <li>3</li>
+
+		   </ol>
+
+		   </body>
+		</html>
+DIV+CSS 布局
+标签可以嵌套
+	<div>
+	<span></span>
+	<h1></h1>
+	</div>
+	<ul>
+	<li>
+	<div>
+	<h1></h1>
+	<br/>
+	</div>
+
+	</li>
+	</ul>
+
+

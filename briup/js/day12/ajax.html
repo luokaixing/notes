@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax</title>
+	<script>
+	//js原生ajax
+		getAllData();
+		function getAllData(){
+			var http=new XMLHttpRequest();
+			http.open('GET','http://www.wangshuwen.com/api/getRegion');
+			http.onreadystatechange=function(){
+				if(http.status===200&&http.readyState===4){
+					console.log(http.responseText);
+					var res=http.responseText;
+					console.log(JSON.parse(res));
+						console.log(JSON.parse(res).data);
+						var arr=JSON.parse(res).data;
+				}
+			}
+			http.send();
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

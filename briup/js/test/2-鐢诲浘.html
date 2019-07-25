@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>画图</title>
+	<style>
+		div{
+			background: rgba(255,0,0,0.5);
+			border-radius: 50%;
+			position: absolute;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			var tempDiv;
+			var startX;
+			var startY;
+			document.onmousedown = function(event){
+				// 鼠标按下
+				tempDiv = document.createElement('div');
+				// 设置位置,保留位置是为了设置宽高
+				startX = event.clientX;
+				startY = event.clientY;
+				tempDiv.style.left = event.clientX+'px';
+				tempDiv.style.top = event.clientY+'px';
+				document.body.appendChild(tempDiv);
+			}
+			document.onmousemove = function(event){
+				// 设置宽高
+				if(tempDiv){
+					tempDiv.style.width = event.clientX-startX+'px';
+					tempDiv.style.height = event.clientY-startY+'px';
+				}
+			}
+			document.onmouseup = function(){
+				tempDiv = null;
+			}
+		}
+	</script>
+</head>
+<body>
+	按下鼠标绘制，移动鼠标改变大小
+</body>
+</html>

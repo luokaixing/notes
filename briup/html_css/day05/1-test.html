@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试属性</title>
+	<style>
+		.one{
+			color:red !important;
+		}
+		.two{
+			color:blue;
+		}
+		div{
+			color: cyan;
+		}
+		[class~=one]{
+			color:coral;
+		}
+		
+
+
+	</style>
+</head>
+<body>
+	<div class="one two">one two</div>
+	<div class="onetwo">onetwo</div>
+</body>
+</html>

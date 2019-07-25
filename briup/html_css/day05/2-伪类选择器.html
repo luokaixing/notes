@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>伪类选择器</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+
+		}
+		/*div{
+			border:1px solid red;
+			margin:10px;
+		}*/
+		/*第一个孩子元素*/
+		/*div>*:first-child{
+			background: coral;
+		}*/
+		/*div>*:last-child{
+			background: yellow;
+		}
+		div>*:only-child{
+			background: green;
+		}*/
+		/*odd even奇数偶数选择*/
+		/*div>*:nth-child(2){
+			background: orange;
+		}*/
+		/*行高列宽*/
+		table{
+			border:1px solid #444;
+			border-collapse: collapse;
+		}
+		thead>tr{
+			background: #aaa;
+		}
+		tbody>tr:nth-child(even){
+			background: #ccc;
+		}
+		tbody>tr:hover{
+			background: #eee; 
+		}
+		th,td{
+			width:100px;
+			border:1px solid #444  ;
+		}
+		tr{
+			height:50px;
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<div> 
+		<p>p1</p>
+		<p>p2</p>
+		<span>span1</span>
+		<span>span2</span>
+
+	</div>
+	<div> 
+		<p>p1</p>
+		<p>p2</p>
+		<span>span1</span>
+		<span>span2</span>
+		<span>span3</span>
+		<span>span4</span>
+
+	</div>
+	<div>
+		<span>span</span>
+	</div>
+	<table>
+	    <thead>
+	    	<tr>
+	    		<th>1</th>
+	    		<th>2</th>
+	    		<th>3</th>
+	    		<th>4</th>
+	    		<th>5</th>
+	    		<th>6</th>
+	    	</tr>
+	    </thead>
+		<tbody>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	
+</body>
+</html>

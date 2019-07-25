@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+</head>
+<body>
+	<script>
+	var time=new Date();
+	var year=time.getFullYear();
+	var month=time.getMonth()+1;
+	var day=time.getDate();
+	if(month<10){
+		month='0'+month;
+	}
+	if(day<10){
+		day='0'+day;
+	}
+
+	var str=year+'年'+month+'月'+day+'日';
+	document.write(str+"<br>");
+	// document.write(time.getTime());
+	</script>
+	
+</body>
+</html>

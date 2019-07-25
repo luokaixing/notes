@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jso1实例</title>
+	<script>
+		var c=0;
+		var t;
+		var timer_is_on=0;
+	function timedCount(){
+		document.getElementById("txt").value=c;
+		c=c+1;
+		t=setTimeout(function(){timedCount()},1000)
+		}
+	function doTimer(){
+		if(!timer_is_on){
+			timer_is_on=1;
+			timedCount();
+		}
+	}
+	function stopCount(){
+		clearTimeout(t);
+		timer_is_on=0;
+	}
+
+
+
+	</script>
+</head>
+<body>
+	<p>点击按钮显示确认框</p>
+	<button onclick="myFunction()">点击我</button>
+	<p id="demo"></p>
+	<script>
+	function myFunction(){
+		var x;
+		var r=confirm("按下按钮！");
+		if(r==true){
+			x="你按下了\"确认\"按钮!";
+		}else{
+			x="你按下了\"取消\"按钮!";
+		}
+		document.getElementById("demo").innerHTML=x;
+}
+	</script>
+	<button onclick="test1()">点击循环执行</button>
+	<p id="demo1"></p>
+	<script>
+	function test1(){
+		var x="",i;
+		for(i=0;i<5;i++){
+			x= x+ "这个数是"+i+"<br>";
+			
+		}
+	 document.getElementById("demo1").innerHTML=x;
+	}
+	
+
+
+	</script>
+	<p>点击按钮3秒后弹出内容</p>
+	<button onclick="test2()">点我看看呗</button>
+	<script>
+	function test2(){
+		setTimeout(function(){alert("Hello world")},3000);
+	}
+
+
+
+	</script>
+	
+	<form>
+		<input type="button" value="开始计数" onclick="doTimer()" />
+		<input type="text" id="txt" />
+		<input type="button" value="停止计数" onclick="stopCount()" />
+	</form>
+	<p>点击开始就可以计数，点击暂停就终止</p>
+	
+</body>
+</html>
